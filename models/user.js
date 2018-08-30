@@ -1,0 +1,19 @@
+const path = require('path');
+
+module.exports = (sequelize, DataTypes) => {
+  const User = sequelize.define('User', {
+    firstName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    email: DataTypes.STRING,
+    profilePic: {
+      type: DataTypes.STRING,
+      get() {
+        return path.resolve('profilePics', this.getDataValue('profilePic'));
+      },
+    },
+  }, {});
+  User.associate = function associate(models) {
+    User.hasMany(models.Action);
+  };
+  return User;
+};
