@@ -1,4 +1,4 @@
-require('./routes');
+require('./api');
 
 const lint = require('mocha-eslint');
 
