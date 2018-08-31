@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   }, {});
   Action.associate = function associate(models) {
-    Action.belongsTo(models.User);
+    Action.belongsTo(models.User, { onDelete: 'CASCADE' });
   };
   return Action;
 };

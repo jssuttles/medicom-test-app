@@ -1,5 +1,3 @@
-require('./api');
-
 const lint = require('mocha-eslint');
 
 const paths = [
@@ -8,3 +6,5 @@ const paths = [
 ];
 
 lint(paths);
+
+require('./api');

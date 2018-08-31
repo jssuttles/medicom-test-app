@@ -23,12 +23,7 @@
 <% include components/header.ejs %>
 
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h2>Welcome to the <%=title%>!</h2>
-
-    </div>
-  </div>
+  <% include components/messengerbox.ejs %>
 </div><!-- /.container -->
 
 <!-- Bootstrap core JavaScript
@@ -36,6 +31,9 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="/javascripts/helpers.js"></script>
+<script src="/javascripts/messenger.js"></script>
+
 </body>
 </html>
-
