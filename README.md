@@ -24,7 +24,7 @@ Working on this project:
 8. Run ```sequelize db:migrate``` to migrate the tables to your databases
 9. Run ```sequelize db:seed:all``` to seed your tables with premade data
 10. Work through the following tasks:
-    - Users should be able to whisper to online users
+    - Users should be able to whisper (send to only one) to online users
     - The table of users should display profile pic in table
     - The table of users should have actions that can be associated with users
     - The table of users should display how many times those actions have been performed
