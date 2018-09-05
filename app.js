@@ -51,9 +51,13 @@ app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
   res.status(loggedError.status);
-  res.render('error');
+
+  if (req.accepts('html')) {
+    res.render('error');
+  } else { // everything allows html unless specifically designated by us to ask for json
+    res.json(err);
+  }
 
   loggedError.url = req.originalUrl;
   loggedError.method = req.method;

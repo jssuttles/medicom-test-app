@@ -4,6 +4,9 @@ window.helpers = {
       type: 'get',
       url,
       data,
+      headers: {
+        Accept: 'application/json',
+      },
       dataType: 'json',
       contentType: 'application/json',
       success: (result) => {
@@ -20,6 +23,9 @@ window.helpers = {
       type: 'post',
       url,
       data,
+      headers: {
+        Accept: 'application/json',
+      },
       dataType: 'json',
       contentType: 'application/json',
       success: (result) => {
