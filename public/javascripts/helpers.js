@@ -3,7 +3,7 @@ window.helpers = {
     const allOptions = Object.assign({
       type: 'get',
       url,
-      data,
+      data: JSON.stringify(data),
       headers: {
         Accept: 'application/json',
       },
@@ -22,7 +22,7 @@ window.helpers = {
     const allOptions = Object.assign({
       type: 'post',
       url,
-      data,
+      data: JSON.stringify(data),
       headers: {
         Accept: 'application/json',
       },

@@ -11,11 +11,11 @@ function populateUsersTable() {
   const usersTable = $('#usersTable');
   usersTable.empty();
   return window.helpers.get('users')
-    .then((users) => {
-      users.forEach(user => usersTable.append(getUserRow(user)));
-    }).catch((err) => {
-      console.error(err);
-    });
+  .then((users) => {
+    users.forEach(user => usersTable.append(getUserRow(user)));
+  }).catch((err) => {
+    console.error(err);
+  });
 }
 
 $(() => {

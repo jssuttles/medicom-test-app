@@ -64,16 +64,16 @@ class WebsocketClient {
 
   connect() {
     window.helpers.get('/websocket')
-      .then((websocketServer) => {
-        this.wsClient = new WebSocket(websocketServer);
+    .then((websocketServer) => {
+      this.wsClient = new WebSocket(websocketServer);
 
-        this.wsClient.onopen = () => {
-          this.wsClient.onmessage = this._onMessage;
-        };
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+      this.wsClient.onopen = () => {
+        this.wsClient.onmessage = this._onMessage;
+      };
+    })
+    .catch((err) => {
+      console.error(err);
+    });
   }
 }
 

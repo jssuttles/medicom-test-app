@@ -15,7 +15,7 @@ Has mocha tests
 * Resources: https://mochajs.org/, http://www.chaijs.com/api/bdd/
 
 Working on this project:
-1. Make sure that the latest node version is installed
+1. Make sure that a version of node is installed. (Last tested on v10.9.0: https://nodejs.org/download/release/v10.9.0/)
 2. Fork this repository
 3. Clone your repository to your machine
 4. Go to the directory where you cloned this repository and ```npm install``` the node modules
@@ -24,7 +24,8 @@ Working on this project:
 7. Run ```npm install -g sequelize-cli```
 8. Run ```sequelize db:migrate``` to migrate the tables to your databases
 9. Run ```sequelize db:seed:all``` to seed your tables with premade data
-10. Work through the following tasks:
+10. Run ```npm start``` to run the application. It will run at http://localhost:3000. To debug the server, run ```npm run debug```. Go to chrome://inspect to inspect the server.
+11. Work through the following tasks:
     - Users should be able to whisper (send to only one) to online users
     ![Alt text](readmePics/whisper.png?raw=true "Whisper")
     - The table of users should display profile pic in table
@@ -36,7 +37,7 @@ Working on this project:
     - The table of users should display how many times those actions have been performed
         * Next to the button, display a counter
     - Add 2 more mocha tests based on either api or models
-11. When the above are complete, create a pull request into this repository
+12. When the above are complete, create a pull request into this repository
 
 Folder Structure:
 ```
