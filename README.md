@@ -26,11 +26,11 @@ Working on this project:
 9. Run ```sequelize db:seed:all``` to seed your tables with premade data
 10. Work through the following tasks:
     - Users should be able to whisper (send to only one) to online users
-    ![Alt text](whisper.png?raw=true "Whisper")
+    ![Alt text](readmePics/whisper.png?raw=true "Whisper")
     - The table of users should display profile pic in table
-    ![Alt text](profilePic.png?raw=true "Profile Pic")
+    ![Alt text](readmePics/profilePic.png?raw=true "Profile Pic")
     - A user should be able to add a user
-    ![Alt text](addUser.png?raw=true "Add User")
+    ![Alt text](readmePics/addUser.png?raw=true "Add User")
     - The table of users should have "actions" that can be associated with users
         * These can be buttons next to the user in the "Actions" column
     - The table of users should display how many times those actions have been performed
