@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       get() {
         return this.getDataValue('profilePic')
           ? path.resolve('profilePics', this.getDataValue('profilePic'))
-          : null;
+          : '';
       },
     },
   }, {});
