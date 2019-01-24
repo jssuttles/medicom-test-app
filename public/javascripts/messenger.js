@@ -1,3 +1,5 @@
+const ENTER_KEY = 13;
+
 class WebsocketClient {
   constructor() {
     this.socketId = null;
@@ -179,7 +181,7 @@ class MessengerUI {
     });
 
     $('#messageInput').on('keyup', (e) => {
-      if (e.keyCode === 13) {
+      if (e.keyCode === ENTER_KEY) {
         $('#sendMessageButton').trigger('click');
       }
       return e;
