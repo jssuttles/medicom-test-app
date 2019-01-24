@@ -19,9 +19,10 @@ Working on this project:
 2. Fork this repository
 3. Clone your repository to your machine
 4. Go to the directory where you cloned this repository and ```npm install``` the node modules
-5. Make sure that mariaDB is downloaded and installed
-6. Create two databases: database_development and database_test
-7. Run ```npm install -g sequelize-cli```
+5. Make sure that mariaDB is downloaded and installed (macOS: https://mariadb.com/kb/en/library/installing-mariadb-on-macos-using-homebrew/  
+win: https://mariadb.com/downloads/)
+6. Create two databases: database_development and database_test (https://dev.mysql.com/doc/refman/8.0/en/create-database.html)
+7. Run ```npm install -g sequelize-cli``` (https://www.npmjs.com/package/sequelize-cli)
 8. Run ```sequelize db:migrate``` to migrate the tables to your databases
 9. Run ```sequelize db:seed:all``` to seed your tables with premade data
 10. Run ```npm start``` to run the application. It will run at http://localhost:3000. To debug the server, run ```npm run debug```. Go to chrome://inspect to inspect the server.

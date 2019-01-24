@@ -8,9 +8,9 @@ module.exports = (sequelize, DataTypes) => {
     profilePic: {
       type: DataTypes.STRING,
       get() {
-        return this.profilePic ?
-          path.resolve('profilePics', this.profilePic) :
-          null;
+        return this.getDataValue('profilePic')
+          ? path.resolve('profilePics', this.getDataValue('profilePic'))
+          : null;
       },
     },
   }, {});
