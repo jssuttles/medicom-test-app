@@ -7,11 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     profilePic: {
       type: DataTypes.STRING,
-      get() {
+      /*get() {
         return this.profilePic ?
           path.resolve('profilePics', this.profilePic) :
           null;
-      },
+      },*/
     },
   }, {});
   User.associate = function associate(models) {

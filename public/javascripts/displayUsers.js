@@ -18,6 +18,22 @@ function populateUsersTable() {
   });
 }
 
+function sendUserInfo(){
+  const newuser = {"firstName":$('#firstNameInput').val(),
+                   "lastName":$('#lastNameInput').val(),
+                   "email":$('#emailInput').val()}
+  return window.helpers.post('users',newuser)
+  .then(
+    //do nothing? display success to user? reload the page? not sure how to do this
+  ).catch((err) => {
+    console.error(err);
+  });
+}
+
 $(() => {
   populateUsersTable();
+
+  $('#submitButton').on('click', () => {
+    sendUserInfo();
+  });
 });

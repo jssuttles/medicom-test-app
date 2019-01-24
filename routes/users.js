@@ -16,7 +16,14 @@ router.get('/', async (req, res, next) => {
 });
 
 router.post('/', (req, res) => {
-  // TODO: push user data to database
+  try {
+    const data = req.body;
+    const ret = models.User.create(data); //can I not await it?
+    return 1; //success?
+  } catch (e) {
+    e.status = 500;
+    return e; //not sure if this is proper error handling
+  }
 });
 
 module.exports = router;

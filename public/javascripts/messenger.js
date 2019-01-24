@@ -145,6 +145,15 @@ class MessengerUI {
   }
 
   _onWhisper(messageJSON) {
+    const messageHTML = window.helpers.getHTMLFromTemplate('messageTemplate');
+
+    messageHTML.find('.socketId').text(messageJSON.from);
+
+    messageHTML.find('.message').text("WHISPHER: "+messageJSON.data);
+
+    messageHTML.data('sentBy', messageJSON.from);
+
+    $('#messengerMessagesContainer').prepend(messageHTML);
 
   }
 
@@ -173,8 +182,14 @@ class MessengerUI {
   init() {
     $('#sendMessageButton').on('click', () => {
       const messageInput = $('#messageInput');
+      const target = $('#sendToDropdownLabelId').data('socketId');
       const message = messageInput.val();
-      this.wsClient.sendMessage(message);
+      if (target==-1){
+        this.wsClient.sendMessage(message);
+      }
+      else{
+        this.wsClient.sendWhisper(parseInt(target),message);
+      }
       messageInput.val('');
     });
 
