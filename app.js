@@ -42,6 +42,7 @@ app.use((req, res, next) => {
 });
 
 // error handler
+// express automagically assumes that using a 4 parameter function is an error handler
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   const loggedError = new Error(err.message);

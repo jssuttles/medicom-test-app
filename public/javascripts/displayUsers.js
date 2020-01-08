@@ -1,3 +1,8 @@
+/**
+ * Given a user get an HTML row with the user data
+ * @param {Object} user
+ * @return {JQuery<HTMLElement>}
+ */
 function getUserRow(user) {
   const userRow = window.helpers.getHTMLFromTemplate('userRowTemplate');
   userRow.find('.firstName').text(user.firstName);
@@ -7,17 +12,20 @@ function getUserRow(user) {
   return userRow;
 }
 
+/**
+ * Populate the usersTable with data from the server
+ * @return {Promise}
+ */
 function populateUsersTable() {
   const usersTable = $('#usersTable');
   usersTable.empty();
   return window.helpers.get('users')
   .then((users) => {
-    users.forEach(user => usersTable.append(getUserRow(user)));
+    users.forEach((user) => usersTable.append(getUserRow(user)));
   }).catch((err) => {
     console.error(err);
   });
 }
 
-$(() => {
-  populateUsersTable();
-});
+// on ready, populate the users table
+$(() => populateUsersTable());

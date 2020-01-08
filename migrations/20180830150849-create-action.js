@@ -1,6 +1,7 @@
 const constants = require('../modules/constants');
 
 module.exports = {
+  // create actions table
   up: (queryInterface, Sequelize) => queryInterface.createTable('Actions', {
     id: {
       allowNull: false,
@@ -29,5 +30,5 @@ module.exports = {
       type: Sequelize.DATE,
     },
   }),
-  down: queryInterface => queryInterface.dropTable('Actions'),
+  down: (queryInterface) => queryInterface.dropTable('Actions'),
 };

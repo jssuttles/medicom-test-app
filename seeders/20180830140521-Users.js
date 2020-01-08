@@ -1,7 +1,8 @@
 const moment = require('moment');
 
 module.exports = {
-  up: queryInterface => queryInterface.bulkInsert('Users', [{
+  // on seed, insert test users
+  up: (queryInterface) => queryInterface.bulkInsert('Users', [{
     firstName: 'Alice',
     lastName: 'Dean',
     email: 'alicedean@email.com',
@@ -17,5 +18,5 @@ module.exports = {
     updatedAt: moment().toDate(),
   }]),
 
-  down: queryInterface => queryInterface.bulkDelete('Users', null, {}),
+  down: (queryInterface) => queryInterface.bulkDelete('Users', null, {}),
 };

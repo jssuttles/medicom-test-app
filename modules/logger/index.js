@@ -1,7 +1,7 @@
 const winston = require('winston');
 require('winston-daily-rotate-file');
 
-const myFormat = winston.format.printf(info => `${info.timestamp} ${info.level}: ${(info.url && info.method) ? `${info.method} ${info.url} ${info.status} - ` : ''}${info.stack}`);
+const myFormat = winston.format.printf((info) => `${info.timestamp} ${info.level}: ${(info.url && info.method) ? `${info.method} ${info.url} ${info.status} - ` : ''}${info.stack}`);1
 
 const format = winston.format.combine(winston.format.timestamp(), myFormat);
 
