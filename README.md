@@ -11,7 +11,7 @@ A table of users
 * table is associated with a table of actions through a many to one association
 * Resources: http://docs.sequelizejs.com/
 
-A mocha tests
+Mocha tests
 * run using ```mocha test```
 * Resources: https://mochajs.org/, http://www.chaijs.com/api/bdd/
 
