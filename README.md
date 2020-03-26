@@ -1,6 +1,7 @@
 # medicom-test-app
 
 This test application has the following:
+
 A websocket server which is used for a messenger
 * Users can broadcast messages to everyone
 * When users leave, the messages that they have sent look inactive
