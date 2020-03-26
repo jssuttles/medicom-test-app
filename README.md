@@ -46,7 +46,7 @@ win: https://mariadb.com/downloads/)
 
 Folder Structure:
 ```
-+- .idea - used if you have an JetBrains IDE
++- .idea - used if you have a JetBrains IDE
 +- bin - runs the server
 +- config - holds configuration files including DB config files
 +- migrations - holds sequelize migrations including initial table creation
